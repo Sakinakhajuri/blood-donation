@@ -1,0 +1,40 @@
+{% extends 'userr/main.html' %}
+{% load static %}
+{% block content %}
+
+    <div class="search">
+
+      <form action="{% url 'donorlistsite' %}" method="POST">
+          {% csrf_token %}
+          <div class="input-group mb-3">
+            {{forms_search.blood_group}}
+            {{forms_search.city}}
+          </div>
+        <button type="submit" class="btn search_bt" >Search</button>
+
+      </form>
+    </div>
+
+<style>
+
+.search {
+  width: 800px;
+  height: 700px;
+  margin-left: 550px;
+  margin-top: 100px;
+}
+
+.search_bt {
+  background-color: red;
+  color: white;
+  margin-left: 10px;
+  margin-top: 50px;
+  width: 200px;
+}
+<style>
+   {% endblock  %}
+
+
+
+
+

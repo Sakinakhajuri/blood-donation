@@ -1,0 +1,61 @@
+{% extends 'userr/main.html' %}
+{% load static %}
+{%block content %}
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bootstrap split screen</title>
+<style>
+ {
+  box-sizing: border-box;
+}
+
+
+.row {
+  float: top;
+  height: 20%;
+ /* padding: 10px;*/
+   /* Should be removed. Only for demonstration */
+}
+.row1 {
+   background-image: url('{% static 'images/blood donation img 3 (2).png' %}');
+  float: top;
+  height: 80%;
+
+   /* Should be removed. Only for demonstration */
+}
+
+</style>
+</head>
+<body>
+<div class="row1" style="background-color:lavender "><br>
+<div
+      style="
+        background-color: crimson;
+        border-radius: 10px;
+        width: fit-content;
+        padding: 1em;
+        margin: 0 auto;
+        box-shadow: 0 0 10px black;
+      "
+    >
+
+    <center><font color="white"><h1><U>Registration </U></h1>
+    </font></center>
+
+<form method="POST">
+
+  <div> <font color="white">
+       {% csrf_token %}
+<table>
+      {{form.as_table}}<br></font></div></table><br><br>
+{{m1}}
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="REGISTER" >
+
+        <input type="button" onClick="location.href='http://127.0.0.1:8000/'" value="CANCEL">
+
+</form>
+</div>
+</div><br><br><br>
+</body>
+{% endblock %}

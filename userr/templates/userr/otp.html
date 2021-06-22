@@ -1,0 +1,23 @@
+{% extends 'userr/main.html' %}
+{% load static %}
+{% block content %}
+<body>
+<div  style="background-color:lavender "><br>
+<center><h1><u>VERIFICATION</u></h1>
+<form method="POST">
+
+  <div> <font color="black">
+       {% csrf_token %}
+<table>
+      {{otpForm.as_table}}<br></font></div></table><br><br>
+    {{message}}<br><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="VERIFY" >
+
+        <input type="button" onClick="location.href='http://127.0.0.1:8000/'" value="CANCEL">
+
+</form>
+</center>
+</div>
+</body>
+
+{% endblock %}

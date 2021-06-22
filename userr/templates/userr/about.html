@@ -1,0 +1,60 @@
+{% extends 'userr/main.html' %}
+{% load static %}
+{%block content %}
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bootstrap split screen</title>
+<style>
+ {
+  box-sizing: border-box;
+}
+
+
+.column {
+  float: left;
+  width: 50%;
+ /* padding: 10px;*/
+  height:530px; /* Should be removed. Only for demonstration */
+}
+.column1 {
+  float: left;
+  width: 50%;
+
+  height:530px; /* Should be removed. Only for demonstration */
+}
+</style>
+</head>
+<body>
+<div  style="background-color:lavender ">
+<center><u>    <h1>About us</h1></u></center><br><br>
+<div class="column">
+<h3><font color="red"><i> What is the use of this website?</i></font></h3>
+
+&nbsp;&nbsp;&nbsp;&nbsp;  The main aim to develop this website was to donate blood to the ones in need.
+        As we know blood donation is required for various purposes.
+        In the current situation when we require blood we need to contact the blood banks and acquire the blood.
+        But the specific blood group may not be available at times.
+        Thus,there is an urge to provide a system wherein we can track a donor and save a life of our loved ones.
+Hence,this webite is developed to eradicate the faults in existing system.<br><br>
+<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="{% static 'images/blood donation img 4 (2).png'  %}" >
+</div>
+<div class="column1">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="{% static 'images/blood donation img 1 (11).png'  %}" >
+<h3><font color="red"><i> How does the website operate?</i></font></h3>
+&nbsp;&nbsp;&nbsp;&nbsp;  Firstly,we have 5 links in our navigation bar i.e. Home,Register as Donor,Search for Donor,About us and Contact us.<br>
+1. Home-This link redirects you to the main page.<br>
+2. Register As Donor- If you wish to donate blood and if you're above 18 years you can register here with your credentials.<br>
+3. Search As Donor- If you're searching for a donor you can specify the details of patient in need and you'll get a list of people with the correct match along with the contact details. Thus you can reach out to them.<br>
+4. About Us- This link will redirect you to the current page.<br>
+5. Contact Us- This link will redirect you to a page where we've specified our contact details. You can also reach out to us by typing in your message in the given textboxes along with the credentials.
+        <br><br></div>
+<br><center><h3><font color="red"><i><u> This website is purely developed for a social cause. We hope that we end up saving a life of your loved one!!</u></i></font></h3>
+</center>
+
+</div>
+{%endblock%}

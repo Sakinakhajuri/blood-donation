@@ -1,0 +1,27 @@
+{% extends 'userr/main.html' %}
+{% load static %}
+{%block content %}
+
+<div class="container-fluid">
+        <div class="form_body">
+            <h1 class="text-center">Details about {{details.name}}</h1>
+
+            <div class= "donor_details m-5">
+                <p><strong>Name:</strong> {{details.name}}</p>
+                <p><strong>Gender:</strong> {{details.gender}}</p>
+  		<p><strong>Name:</strong> {{details.blood_group}}</p>
+                <p><strong>Gender:</strong> {{details.phone}}</p>
+ 		<p><strong>Name:</strong> {{details.email}}</p>
+                <p><strong>Gender:</strong> {{details.area}}</p>
+ 		<p><strong>Name:</strong> {{details.city}}</p>
+                <p><strong>Gender:</strong> {{details.pincode}}</p>
+ 		<p><strong>Name:</strong> {{details.any_disease}}</p>
+              
+                
+        </div>
+        </div>
+
+
+
+{% endblock  %}
+

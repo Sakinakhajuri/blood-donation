@@ -1,0 +1,10 @@
+
+<form method="POST">
+    <center>
+    {% csrf_token %}
+    {{form.as_p}}<br>
+    <input type="submit" value="save" >
+
+        <input type="button" onClick="location.href='http://127.0.0.1:8000/'" value="CANCEL">
+    </center>
+</form>

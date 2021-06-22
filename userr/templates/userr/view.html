@@ -1,0 +1,71 @@
+{% extends 'userr/main.html' %}
+{% load static %}
+{% block content %}
+
+<html><body>
+<div class="container-fluid">
+<div class="form_body">
+<br>
+      
+<h2 class="text-center">DONARS INFORMATION!!!</h2>
+
+<style>
+table,th,td{
+border:1px black solid;
+}
+table{
+width: 80%;
+}
+
+</style>
+
+{% if display %}
+
+<center><table>
+<tr>
+<th>ID</th>
+<th>NAME</th>
+<th>BLOOD GROUP</th>
+<th>CITY</th>
+<th>PINCODE</th>
+</tr>
+
+{% for st in display %}
+<tr>
+<td>{{st.id}}</td>
+<td>{{st.name}}</td>
+<td>{{st.blood_group}}</td>
+<td>{{st.city}}</td>
+<td>{{st.pincode}}</td>
+
+
+</tr>
+{% endfor %}
+
+</table></cenetr>
+
+{% else %}
+<h1>no data</h1>
+{% endif %}
+	
+
+
+ </div>
+
+  </div>
+
+  </div>
+
+
+
+
+{% endblock  %}
+
+</body>
+</html>
+
+
+
+
+
+
