@@ -1,0 +1,23 @@
+{% extends 'userr/main.html' %}
+{% load static %}
+{% block content %}
+<body>
+<div  style="background-color:lavender "><br>
+<center><h1><u>UPDATE BLOOD DONATION DATE</u></h1>
+<form method="POST">
+
+  <div> <font color="black">
+       {% csrf_token %}
+<table>
+      {{uform.as_table}}<br></font></div></table><br><br>
+    <font color="red">{{message}}</font><br><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="UPDATE" >
+
+        <input type="button" onClick="location.href='http://127.0.0.1:8000/update/'" value="CANCEL">
+
+</form>
+</center>
+</div>
+</body>
+
+{% endblock %}
